@@ -5,10 +5,9 @@ scanActiveBtn.addEventListener("click", function () {
     var canvasElement = document.getElementById("canvas");
     var canvas = canvasElement.getContext("2d");
     var loadingMessage = document.getElementById("loadingMessage");
-    var outputContainer = document.getElementById("output");
+    // var outputContainer = document.getElementById("output");
     var outputMessage = document.getElementById("outputMessage");
     var outputData = document.getElementById("outputData");
-    let outputDataLength = document.getElementById("outputDataLength");
 
     function drawLine(begin, end, color) {
         canvas.beginPath();
@@ -34,7 +33,7 @@ scanActiveBtn.addEventListener("click", function () {
         if (video.readyState === video.HAVE_ENOUGH_DATA) {
             loadingMessage.hidden = true;
             canvasElement.hidden = false;
-            outputContainer.hidden = false;
+            // outputContainer.hidden = false;
 
             // 읽어들이는 비디오 화면의 크기
             canvasElement.height = video.videoHeight;
@@ -68,7 +67,7 @@ scanActiveBtn.addEventListener("click", function () {
                 // 스캔 기능 비활성화
                 loadingMessage.hidden = true;
                 canvasElement.hidden = true;
-                outputContainer.hidden = false;
+                // outputContainer.hidden = false;
 
                 // return을 써서 함수를 빠져나가면 QR코드 프로그램이 종료된다.
                 return;
