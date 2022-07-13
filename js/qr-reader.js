@@ -75,7 +75,7 @@ scanActiveBtn.addEventListener("click", function () {
 
             // QR코드 인식에 실패한 경우
             else {
-                outputMessage.hidden = false;
+                // outputMessage.hidden = false;
                 outputData.parentElement.hidden = true;
             }
         }
